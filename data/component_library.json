@@ -1,0 +1,231 @@
+[
+  {
+    "id": "conciseness",
+    "text": "Please use concise language",
+    "description": "Requires concise output",
+    "effect_vector": {
+      "conciseness": 0.8,
+      "readability": 0.6,
+      "completeness": -0.2
+    },
+    "conflicts": [
+      "detail_oriented",
+      "comprehensive"
+    ],
+    "requires": [],
+    "estimated_tokens": 8
+  },
+  {
+    "id": "three_points",
+    "text": "Please discuss in three main points",
+    "description": "Structure output into three points",
+    "effect_vector": {
+      "completeness": 0.7,
+      "readability": 0.5,
+      "structure": 0.8
+    },
+    "conflicts": [
+      "one_sentence"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "compare_works",
+    "text": "Please compare with related work",
+    "description": "Requires comparison with related work",
+    "effect_vector": {
+      "insightfulness": 0.9,
+      "depth": 0.7,
+      "completeness": 0.3
+    },
+    "conflicts": [],
+    "requires": [
+      "conciseness"
+    ],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "key_formulas",
+    "text": "Please list key formulas",
+    "description": "Requires listing key formulas",
+    "effect_vector": {
+      "technical": 0.8,
+      "precision": 0.7,
+      "readability": -0.4
+    },
+    "conflicts": [
+      "simple_language"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "metaphor",
+    "text": "Please explain using simple metaphors",
+    "description": "Explain complex concepts using metaphors",
+    "effect_vector": {
+      "readability": 0.9,
+      "accessibility": 0.8,
+      "technical": -0.5
+    },
+    "conflicts": [
+      "key_formulas",
+      "technical_terms"
+    ],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "detail_oriented",
+    "text": "Please provide a detailed and comprehensive summary",
+    "description": "Requires detailed summary",
+    "effect_vector": {
+      "completeness": 0.9,
+      "depth": 0.8,
+      "conciseness": -0.7
+    },
+    "conflicts": [
+      "conciseness",
+      "one_sentence"
+    ],
+    "requires": [],
+    "estimated_tokens": 15
+  },
+  {
+    "id": "one_sentence",
+    "text": "Please summarize the core contribution in one sentence",
+    "description": "Requires one-sentence summary",
+    "effect_vector": {
+      "conciseness": 0.9,
+      "focus": 0.8,
+      "completeness": -0.6
+    },
+    "conflicts": [
+      "three_points",
+      "detail_oriented"
+    ],
+    "requires": [],
+    "estimated_tokens": 15
+  },
+  {
+    "id": "technical_terms",
+    "text": "Please use professional academic terminology",
+    "description": "Requires professional terminology",
+    "effect_vector": {
+      "technical": 0.9,
+      "precision": 0.7,
+      "readability": -0.5
+    },
+    "conflicts": [
+      "metaphor",
+      "simple_language"
+    ],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "simple_language",
+    "text": "Please use simple and understandable language",
+    "description": "Requires simple language",
+    "effect_vector": {
+      "readability": 0.9,
+      "accessibility": 0.8,
+      "technical": -0.4
+    },
+    "conflicts": [
+      "key_formulas",
+      "technical_terms"
+    ],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "structure",
+    "text": "Please structure the summary with clear sections",
+    "description": "Requires structured sections",
+    "effect_vector": {
+      "structure": 0.9,
+      "readability": 0.6,
+      "completeness": 0.5
+    },
+    "conflicts": [
+      "one_sentence"
+    ],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "limitations",
+    "text": "Please include limitations of the work",
+    "description": "Requires discussing limitations",
+    "effect_vector": {
+      "critical": 0.8,
+      "completeness": 0.4,
+      "insightfulness": 0.6
+    },
+    "conflicts": [],
+    "requires": [
+      "conciseness"
+    ],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "future_work",
+    "text": "Please suggest future research directions",
+    "description": "Requires suggesting future work",
+    "effect_vector": {
+      "insightfulness": 0.8,
+      "completeness": 0.3,
+      "forward_looking": 0.9
+    },
+    "conflicts": [],
+    "requires": [
+      "conciseness"
+    ],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "key_findings",
+    "text": "Please highlight key findings",
+    "description": "Requires highlighting key findings",
+    "effect_vector": {
+      "focus": 0.8,
+      "readability": 0.5,
+      "completeness": 0.4
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "methodology",
+    "text": "Please describe the methodology in detail",
+    "description": "Requires detailed methodology description",
+    "effect_vector": {
+      "technical": 0.7,
+      "completeness": 0.6,
+      "conciseness": -0.5
+    },
+    "conflicts": [
+      "conciseness"
+    ],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "applications",
+    "text": "Please discuss practical applications",
+    "description": "Requires discussing applications",
+    "effect_vector": {
+      "practical": 0.9,
+      "insightfulness": 0.6,
+      "completeness": 0.3
+    },
+    "conflicts": [],
+    "requires": [
+      "conciseness"
+    ],
+    "estimated_tokens": 12
+  }
+]

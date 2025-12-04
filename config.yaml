@@ -1,0 +1,55 @@
+# config.yaml
+project:
+  name: "ToT-PromptOptimizer"
+  version: "1.0.0"
+  description: "Tree of Thoughts Prompt Optimization Framework - English Version"
+
+models:
+  target_model:
+    path: "/mnt/sharedata/ssd_large/common/LLMs/Qwen/Qwen3-1.7B"  # 目标LLM路径
+    device: "cuda:2"
+    tensor_parallel_size: 1
+    dtype: "bfloat16"
+    max_model_len: 4096
+    
+  evaluator_model:
+    path: "/mnt/sharedata/ssd_large/common/LLMs/Qwen/Qwen3-4B"  # 评估LLM路径
+    device: "cuda:3"
+    tensor_parallel_size: 1
+    dtype: "bfloat16"
+    max_model_len: 4096
+
+optimization:
+  max_iterations: 30
+  beam_width: 3
+  exploration_weight: 1.41
+  max_depth: 5
+  max_tokens: 200
+  task_description: "Summarize this technical paper"  # 改为英文
+  
+evaluation:
+  train_samples_per_eval: 10    # 训练评估样本数，-1 表示全部
+  val_samples_per_eval: 2      # 验证评估样本数， -1 表示全部
+  test_samples_per_eval: 5     # 测试评估样本数， -1 表示全部
+  metrics:                     # 评估指标及权重
+    faithfulness: 0.25
+    conciseness: 0.20
+    completeness: 0.25
+    readability: 0.15
+    insightfulness: 0.15
+
+data:
+  train_size: 50
+  val_size: 15
+  test_size: 10
+  cache_dir: "./data"
+  results_dir: "./results"
+  components_file: "component_library.json"
+  train_file: "train_papers.json"
+  test_file: "test_papers.json"
+  val_file: "val_papers.json"
+
+logging:
+  level: "INFO"
+  file: "./results/logs/optimization.log"
+  console: true

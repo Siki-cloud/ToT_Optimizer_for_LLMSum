@@ -1,0 +1,50 @@
+{
+  "simple": {
+    "prompt": "Summary this paper",
+    "score": 0.6956120943952803,
+    "metrics": {
+      "faithfulness": 0.5657817109144543,
+      "conciseness": 0.5,
+      "completeness": 0.9166666666666666,
+      "readability": 0.8000000000000002,
+      "insightfulness": 0.7000000000000001,
+      "overall": 0.6956120943952803
+    }
+  },
+  "detailed": {
+    "prompt": "Please provide a detailed summary of the paper's core content, methodology, and contributions.",
+    "score": 0.7003390083632018,
+    "metrics": {
+      "faithfulness": 0.6463560334528077,
+      "conciseness": 0.6,
+      "completeness": 0.875,
+      "readability": 0.6666666666666666,
+      "insightfulness": 0.6666666666666666,
+      "overall": 0.7003390083632018
+    }
+  },
+  "structured": {
+    "prompt": "Please summarize the paper from four aspects: background, methodology, experiments, and conclusions.",
+    "score": 0.6429907502569373,
+    "metrics": {
+      "faithfulness": 0.5652963343610826,
+      "conciseness": 0.5666666666666667,
+      "completeness": 0.7333333333333334,
+      "readability": 0.6666666666666666,
+      "insightfulness": 0.6999999999999998,
+      "overall": 0.6429907502569373
+    }
+  },
+  "optimized": {
+    "prompt": "Summarize this technical paper. Please explain using simple metaphors and Please structure the summary with clear sections",
+    "score": 0.6458631713554986,
+    "metrics": {
+      "faithfulness": 0.3867860187553282,
+      "conciseness": 0.5,
+      "completeness": 0.9166666666666666,
+      "readability": 0.6666666666666666,
+      "insightfulness": 0.7999999999999999,
+      "overall": 0.6458631713554988
+    }
+  }
+}

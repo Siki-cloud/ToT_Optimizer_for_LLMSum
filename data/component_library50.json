@@ -1,0 +1,1149 @@
+[
+  {
+    "id": "concise_style",
+    "text": "Please use concise language with minimal redundancy.",
+    "description": "Enforces a short and compact summarization style.",
+    "effect_vector": {
+      "conciseness": 0.9,
+      "readability": 0.6,
+      "completeness": -0.4,
+      "structure": 0.2,
+      "technical": 0.0,
+      "depth": -0.2,
+      "insightfulness": 0.0,
+      "precision": 0.3,
+      "accessibility": 0.4,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "detailed_style",
+      "multi_paragraph_summary"
+    ],
+    "requires": [],
+    "estimated_tokens": 8
+  },
+  {
+    "id": "detailed_style",
+    "text": "Please provide a detailed and thorough summary.",
+    "description": "Expands coverage of technical and contextual aspects.",
+    "effect_vector": {
+      "conciseness": -0.7,
+      "readability": 0.2,
+      "completeness": 0.9,
+      "structure": 0.3,
+      "technical": 0.3,
+      "depth": 0.9,
+      "insightfulness": 0.4,
+      "precision": 0.4,
+      "accessibility": -0.2,
+      "novelty_focus": 0.0,
+      "criticality": 0.1
+    },
+    "conflicts": [
+      "concise_style",
+      "one_sentence_summary"
+    ],
+    "requires": [],
+    "estimated_tokens": 24
+  },
+  {
+    "id": "neutral_tone",
+    "text": "Please use an objective and neutral academic tone.",
+    "description": "Reduces subjective or exaggerated expressions.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 0.2,
+      "completeness": 0.0,
+      "structure": 0.0,
+      "technical": 0.2,
+      "depth": 0.1,
+      "insightfulness": 0.0,
+      "precision": 0.4,
+      "accessibility": 0.1,
+      "novelty_focus": -0.1,
+      "criticality": 0.3
+    },
+    "conflicts": [
+      "persuasive_tone"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "persuasive_tone",
+    "text": "Please emphasize the significance, impact, and novelty of the work.",
+    "description": "Makes the summary more persuasive and emphatic.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.4,
+      "completeness": 0.1,
+      "structure": 0.0,
+      "technical": 0.0,
+      "depth": 0.1,
+      "insightfulness": 0.4,
+      "precision": -0.3,
+      "accessibility": 0.3,
+      "novelty_focus": 0.8,
+      "criticality": -0.1
+    },
+    "conflicts": [
+      "neutral_tone"
+    ],
+    "requires": [],
+    "estimated_tokens": 14
+  },
+  {
+    "id": "formal_academic_style",
+    "text": "Please use a formal academic writing style.",
+    "description": "Uses formal phrasing and avoids colloquial language.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": -0.1,
+      "completeness": 0.1,
+      "structure": 0.2,
+      "technical": 0.4,
+      "depth": 0.2,
+      "insightfulness": 0.0,
+      "precision": 0.3,
+      "accessibility": -0.4,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "simple_accessible_style"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "simple_accessible_style",
+    "text": "Please use simple, clear, and accessible language.",
+    "description": "Targets non-expert readers and avoids jargon.",
+    "effect_vector": {
+      "conciseness": 0.3,
+      "readability": 0.9,
+      "completeness": -0.1,
+      "structure": 0.1,
+      "technical": -0.5,
+      "depth": -0.2,
+      "insightfulness": 0.1,
+      "precision": -0.2,
+      "accessibility": 1.0,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "formal_academic_style",
+      "heavy_technical_terms",
+      "equations_included"
+    ],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "metaphor_style",
+    "text": "Please use metaphors or analogies to explain difficult concepts.",
+    "description": "Improves intuitive understanding via analogies.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.8,
+      "completeness": 0.1,
+      "structure": 0.0,
+      "technical": -0.4,
+      "depth": 0.2,
+      "insightfulness": 0.4,
+      "precision": -0.4,
+      "accessibility": 0.8,
+      "novelty_focus": 0.1,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "heavy_technical_terms",
+      "equations_included"
+    ],
+    "requires": [],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "bullet_point_style",
+    "text": "Please present the summary in concise bullet points.",
+    "description": "Uses bullet points for better scannability.",
+    "effect_vector": {
+      "conciseness": 0.5,
+      "readability": 0.8,
+      "completeness": 0.1,
+      "structure": 0.8,
+      "technical": 0.0,
+      "depth": 0.0,
+      "insightfulness": 0.1,
+      "precision": 0.2,
+      "accessibility": 0.4,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "paragraph_style",
+      "multi_paragraph_summary"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "paragraph_style",
+    "text": "Please present the summary in complete paragraphs.",
+    "description": "Prefers narrative paragraphs instead of lists.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.5,
+      "completeness": 0.3,
+      "structure": 0.4,
+      "technical": 0.1,
+      "depth": 0.2,
+      "insightfulness": 0.1,
+      "precision": 0.1,
+      "accessibility": 0.2,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "bullet_point_style",
+      "table_format_summary"
+    ],
+    "requires": [],
+    "estimated_tokens": 8
+  },
+  {
+    "id": "one_sentence_summary",
+    "text": "Please summarize the paper in exactly one concise sentence.",
+    "description": "Extreme condensation of the paper’s main contribution.",
+    "effect_vector": {
+      "conciseness": 1.0,
+      "readability": 0.7,
+      "completeness": -0.8,
+      "structure": 0.2,
+      "technical": 0.0,
+      "depth": -0.7,
+      "insightfulness": 0.1,
+      "precision": 0.3,
+      "accessibility": 0.6,
+      "novelty_focus": 0.3,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "detailed_style",
+      "multi_paragraph_summary",
+      "structured_sections",
+      "three_key_points",
+      "five_key_points",
+      "table_format_summary"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "multi_paragraph_summary",
+    "text": "Please provide a multi-paragraph summary covering different aspects of the paper.",
+    "description": "Uses multiple paragraphs to cover various aspects.",
+    "effect_vector": {
+      "conciseness": -0.5,
+      "readability": 0.6,
+      "completeness": 0.8,
+      "structure": 0.7,
+      "technical": 0.2,
+      "depth": 0.7,
+      "insightfulness": 0.3,
+      "precision": 0.1,
+      "accessibility": 0.2,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "concise_style",
+      "one_sentence_summary",
+      "bullet_point_style"
+    ],
+    "requires": [],
+    "estimated_tokens": 30
+  },
+  {
+    "id": "crisp_definition_style",
+    "text": "Please start with a crisp, one-sentence definition of the paper’s main idea, then elaborate briefly.",
+    "description": "Combines a definition-like opening with short elaboration.",
+    "effect_vector": {
+      "conciseness": 0.6,
+      "readability": 0.7,
+      "completeness": 0.2,
+      "structure": 0.6,
+      "technical": 0.1,
+      "depth": 0.1,
+      "insightfulness": 0.2,
+      "precision": 0.4,
+      "accessibility": 0.5,
+      "novelty_focus": 0.2,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 14
+  },
+  {
+    "id": "structured_sections",
+    "text": "Please structure the summary with clear sections and headings.",
+    "description": "Requires explicit sections for improved organization.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.6,
+      "completeness": 0.4,
+      "structure": 0.9,
+      "technical": 0.1,
+      "depth": 0.3,
+      "insightfulness": 0.1,
+      "precision": 0.2,
+      "accessibility": 0.3,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "one_sentence_summary"
+    ],
+    "requires": [],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "imrad_structure",
+    "text": "Please structure the summary into Introduction, Methods, Results, and Discussion.",
+    "description": "Uses the standard IMRaD scientific structure.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.5,
+      "completeness": 0.6,
+      "structure": 1.0,
+      "technical": 0.3,
+      "depth": 0.5,
+      "insightfulness": 0.2,
+      "precision": 0.3,
+      "accessibility": 0.1,
+      "novelty_focus": 0.0,
+      "criticality": 0.2
+    },
+    "conflicts": [],
+    "requires": [
+      "structured_sections"
+    ],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "three_key_points",
+    "text": "Please summarize the paper in exactly three key points.",
+    "description": "Forces a concise three-point structure.",
+    "effect_vector": {
+      "conciseness": 0.5,
+      "readability": 0.7,
+      "completeness": 0.4,
+      "structure": 0.8,
+      "technical": 0.0,
+      "depth": 0.2,
+      "insightfulness": 0.3,
+      "precision": 0.2,
+      "accessibility": 0.5,
+      "novelty_focus": 0.1,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "one_sentence_summary",
+      "five_key_points"
+    ],
+    "requires": [],
+    "estimated_tokens": 14
+  },
+  {
+    "id": "five_key_points",
+    "text": "Please summarize the paper in exactly five key points.",
+    "description": "Provides a slightly more detailed point-wise structure.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 0.7,
+      "completeness": 0.6,
+      "structure": 0.8,
+      "technical": 0.1,
+      "depth": 0.4,
+      "insightfulness": 0.3,
+      "precision": 0.2,
+      "accessibility": 0.4,
+      "novelty_focus": 0.1,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "one_sentence_summary",
+      "three_key_points"
+    ],
+    "requires": [],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "headline_style",
+    "text": "Please add short, descriptive subheadings before each main part of the summary.",
+    "description": "Adds informative headlines for each section.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.7,
+      "completeness": 0.2,
+      "structure": 0.8,
+      "technical": 0.0,
+      "depth": 0.1,
+      "insightfulness": 0.1,
+      "precision": 0.1,
+      "accessibility": 0.4,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [
+      "structured_sections"
+    ],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "chronological_order",
+    "text": "Please present the ideas in the chronological order in which they appear in the paper.",
+    "description": "Follows the original paper’s order of presentation.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.4,
+      "completeness": 0.3,
+      "structure": 0.6,
+      "technical": 0.0,
+      "depth": 0.1,
+      "insightfulness": -0.1,
+      "precision": 0.1,
+      "accessibility": 0.1,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "hierarchical_outline"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "hierarchical_outline",
+    "text": "Please organize the summary as a hierarchical outline by importance.",
+    "description": "Reorders content by conceptual importance instead of original order.",
+    "effect_vector": {
+      "conciseness": 0.2,
+      "readability": 0.6,
+      "completeness": 0.3,
+      "structure": 0.9,
+      "technical": 0.1,
+      "depth": 0.3,
+      "insightfulness": 0.3,
+      "precision": 0.1,
+      "accessibility": 0.3,
+      "novelty_focus": 0.1,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "chronological_order"
+    ],
+    "requires": [],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "table_format_summary",
+    "text": "Please present the summary as a table with rows for problem, method, results, and limitations.",
+    "description": "Uses a tabular format to structure the summary.",
+    "effect_vector": {
+      "conciseness": 0.2,
+      "readability": 0.7,
+      "completeness": 0.5,
+      "structure": 1.0,
+      "technical": 0.1,
+      "depth": 0.3,
+      "insightfulness": 0.2,
+      "precision": 0.3,
+      "accessibility": 0.4,
+      "novelty_focus": 0.0,
+      "criticality": 0.2
+    },
+    "conflicts": [
+      "paragraph_style",
+      "one_sentence_summary"
+    ],
+    "requires": [],
+    "estimated_tokens": 20
+  },
+  {
+    "id": "flowchart_like_summary",
+    "text": "Please describe the workflow of the method step by step, like a flowchart in text form.",
+    "description": "Presents the method as a sequence of steps.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.6,
+      "completeness": 0.4,
+      "structure": 0.8,
+      "technical": 0.4,
+      "depth": 0.4,
+      "insightfulness": 0.3,
+      "precision": 0.3,
+      "accessibility": 0.2,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [
+      "focus_methodology"
+    ],
+    "estimated_tokens": 20
+  },
+  {
+    "id": "summary_first_then_details",
+    "text": "Please start with a high-level summary and then provide more detailed explanation.",
+    "description": "Uses a coarse-to-fine structure.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 0.8,
+      "completeness": 0.4,
+      "structure": 0.8,
+      "technical": 0.1,
+      "depth": 0.4,
+      "insightfulness": 0.3,
+      "precision": 0.2,
+      "accessibility": 0.5,
+      "novelty_focus": 0.1,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "focus_main_contribution",
+    "text": "Please focus on explaining the main contribution of the paper.",
+    "description": "Centers the summary around the core contribution.",
+    "effect_vector": {
+      "conciseness": 0.4,
+      "readability": 0.7,
+      "completeness": -0.1,
+      "structure": 0.4,
+      "technical": 0.2,
+      "depth": 0.3,
+      "insightfulness": 0.5,
+      "precision": 0.4,
+      "accessibility": 0.4,
+      "novelty_focus": 0.6,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "highlight_novelty",
+    "text": "Please explicitly highlight what is novel compared to prior work.",
+    "description": "Emphasizes novelty and differences from past work.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.5,
+      "completeness": 0.2,
+      "structure": 0.3,
+      "technical": 0.2,
+      "depth": 0.4,
+      "insightfulness": 0.8,
+      "precision": 0.3,
+      "accessibility": 0.2,
+      "novelty_focus": 1.0,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 14
+  },
+  {
+    "id": "highlight_limitations",
+    "text": "Please explicitly highlight the key limitations of the work.",
+    "description": "Adds critical reflection on the work’s weaknesses.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.5,
+      "completeness": 0.3,
+      "structure": 0.3,
+      "technical": 0.2,
+      "depth": 0.5,
+      "insightfulness": 0.7,
+      "precision": 0.3,
+      "accessibility": 0.2,
+      "novelty_focus": 0.0,
+      "criticality": 1.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 14
+  },
+  {
+    "id": "highlight_applications",
+    "text": "Please highlight practical or real-world applications of the work.",
+    "description": "Focuses on how the work can be applied in practice.",
+    "effect_vector": {
+      "conciseness": 0.0,
+      "readability": 0.6,
+      "completeness": 0.3,
+      "structure": 0.2,
+      "technical": 0.1,
+      "depth": 0.3,
+      "insightfulness": 0.6,
+      "precision": 0.2,
+      "accessibility": 0.4,
+      "novelty_focus": 0.2,
+      "criticality": 0.1
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "focus_methodology",
+    "text": "Please focus on explaining the methodology and how it works.",
+    "description": "Centers the summary on the method or algorithm.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.4,
+      "completeness": 0.5,
+      "structure": 0.4,
+      "technical": 0.8,
+      "depth": 0.7,
+      "insightfulness": 0.4,
+      "precision": 0.6,
+      "accessibility": -0.2,
+      "novelty_focus": 0.3,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 20
+  },
+  {
+    "id": "focus_results",
+    "text": "Please focus on the experimental results and empirical findings.",
+    "description": "Gives priority to reported results and metrics.",
+    "effect_vector": {
+      "conciseness": 0.0,
+      "readability": 0.5,
+      "completeness": 0.5,
+      "structure": 0.3,
+      "technical": 0.4,
+      "depth": 0.5,
+      "insightfulness": 0.5,
+      "precision": 0.7,
+      "accessibility": 0.2,
+      "novelty_focus": 0.2,
+      "criticality": 0.1
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "focus_theoretical_background",
+    "text": "Please explain the theoretical background and underlying principles.",
+    "description": "Emphasizes theory and prior foundations.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.3,
+      "completeness": 0.5,
+      "structure": 0.3,
+      "technical": 0.7,
+      "depth": 0.7,
+      "insightfulness": 0.5,
+      "precision": 0.5,
+      "accessibility": -0.1,
+      "novelty_focus": -0.1,
+      "criticality": 0.1
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 20
+  },
+  {
+    "id": "dataset_details",
+    "text": "Please describe the dataset(s) used, including size and key properties when available.",
+    "description": "Provides information about datasets used in the study.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.4,
+      "completeness": 0.4,
+      "structure": 0.3,
+      "technical": 0.5,
+      "depth": 0.4,
+      "insightfulness": 0.3,
+      "precision": 0.5,
+      "accessibility": 0.1,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "experimental_setup",
+    "text": "Please explain the experimental setup or evaluation protocol.",
+    "description": "Adds clarity on how the experiments were conducted.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.3,
+      "completeness": 0.5,
+      "structure": 0.4,
+      "technical": 0.7,
+      "depth": 0.6,
+      "insightfulness": 0.4,
+      "precision": 0.6,
+      "accessibility": 0.0,
+      "novelty_focus": 0.0,
+      "criticality": 0.1
+    },
+    "conflicts": [],
+    "requires": [
+      "focus_methodology"
+    ],
+    "estimated_tokens": 20
+  },
+  {
+    "id": "ablation_insights",
+    "text": "Please summarize the insights from ablation or sensitivity studies.",
+    "description": "Extracts key lessons from ablation experiments.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.4,
+      "completeness": 0.4,
+      "structure": 0.3,
+      "technical": 0.6,
+      "depth": 0.7,
+      "insightfulness": 0.9,
+      "precision": 0.6,
+      "accessibility": 0.0,
+      "novelty_focus": 0.3,
+      "criticality": 0.2
+    },
+    "conflicts": [],
+    "requires": [
+      "focus_results"
+    ],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "comparative_analysis",
+    "text": "Please compare the proposed approach with key existing methods.",
+    "description": "Highlights similarities and differences with prior work.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.4,
+      "completeness": 0.5,
+      "structure": 0.4,
+      "technical": 0.4,
+      "depth": 0.7,
+      "insightfulness": 0.8,
+      "precision": 0.5,
+      "accessibility": 0.1,
+      "novelty_focus": 0.6,
+      "criticality": 0.3
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 22
+  },
+  {
+    "id": "citation_aware",
+    "text": "Please mention referenced works when relevant, but do not fabricate citations.",
+    "description": "Encourages explicit but accurate reference to prior work.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.3,
+      "completeness": 0.3,
+      "structure": 0.2,
+      "technical": 0.3,
+      "depth": 0.4,
+      "insightfulness": 0.4,
+      "precision": 0.7,
+      "accessibility": -0.1,
+      "novelty_focus": 0.3,
+      "criticality": 0.1
+    },
+    "conflicts": [],
+    "requires": [
+      "fact_checking"
+    ],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "audience_beginners",
+    "text": "Please write the summary for an audience with minimal background knowledge.",
+    "description": "Targets readers with very limited prior knowledge.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 1.0,
+      "completeness": 0.2,
+      "structure": 0.4,
+      "technical": -0.8,
+      "depth": -0.3,
+      "insightfulness": 0.3,
+      "precision": -0.2,
+      "accessibility": 1.0,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "audience_experts",
+      "heavy_technical_terms",
+      "equations_included"
+    ],
+    "requires": [
+      "simple_accessible_style",
+      "light_technical_terms",
+      "equations_avoided"
+    ],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "audience_intermediate",
+    "text": "Please write the summary for readers with some related background knowledge.",
+    "description": "Targets readers who are familiar with the general field but not experts.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 0.8,
+      "completeness": 0.3,
+      "structure": 0.3,
+      "technical": 0.2,
+      "depth": 0.3,
+      "insightfulness": 0.3,
+      "precision": 0.3,
+      "accessibility": 0.7,
+      "novelty_focus": 0.1,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [
+      "light_technical_terms"
+    ],
+    "estimated_tokens": 14
+  },
+  {
+    "id": "audience_experts",
+    "text": "Please write the summary assuming an expert audience.",
+    "description": "Assumes strong background knowledge and tolerance for jargon.",
+    "effect_vector": {
+      "conciseness": 0.2,
+      "readability": -0.1,
+      "completeness": 0.4,
+      "structure": 0.3,
+      "technical": 1.0,
+      "depth": 0.7,
+      "insightfulness": 0.4,
+      "precision": 0.6,
+      "accessibility": -0.7,
+      "novelty_focus": 0.3,
+      "criticality": 0.1
+    },
+    "conflicts": [
+      "audience_beginners"
+    ],
+    "requires": [
+      "formal_academic_style",
+      "heavy_technical_terms"
+    ],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "heavy_technical_terms",
+    "text": "Please use field-specific technical terms where appropriate.",
+    "description": "Encourages precise technical terminology.",
+    "effect_vector": {
+      "conciseness": 0.0,
+      "readability": -0.4,
+      "completeness": 0.2,
+      "structure": 0.0,
+      "technical": 1.0,
+      "depth": 0.5,
+      "insightfulness": 0.2,
+      "precision": 0.8,
+      "accessibility": -0.7,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "simple_accessible_style",
+      "audience_beginners",
+      "light_technical_terms"
+    ],
+    "requires": [],
+    "estimated_tokens": 10
+  },
+  {
+    "id": "light_technical_terms",
+    "text": "Please use technical terms sparingly and explain them briefly when used.",
+    "description": "Balances technicality and accessibility.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 0.8,
+      "completeness": 0.2,
+      "structure": 0.1,
+      "technical": 0.3,
+      "depth": 0.3,
+      "insightfulness": 0.3,
+      "precision": 0.4,
+      "accessibility": 0.8,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "heavy_technical_terms"
+    ],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "equations_included",
+    "text": "Please include and briefly explain the key equations or mathematical formulations.",
+    "description": "Promotes explicit mention of important equations.",
+    "effect_vector": {
+      "conciseness": -0.3,
+      "readability": -0.2,
+      "completeness": 0.4,
+      "structure": 0.2,
+      "technical": 0.9,
+      "depth": 0.6,
+      "insightfulness": 0.3,
+      "precision": 0.7,
+      "accessibility": -0.6,
+      "novelty_focus": 0.1,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "simple_accessible_style",
+      "metaphor_style",
+      "audience_beginners",
+      "equations_avoided"
+    ],
+    "requires": [
+      "heavy_technical_terms"
+    ],
+    "estimated_tokens": 20
+  },
+  {
+    "id": "equations_avoided",
+    "text": "Please avoid using equations and describe everything in words.",
+    "description": "Removes explicit mathematical notation.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 0.7,
+      "completeness": -0.2,
+      "structure": 0.1,
+      "technical": -0.5,
+      "depth": -0.3,
+      "insightfulness": 0.1,
+      "precision": -0.3,
+      "accessibility": 0.9,
+      "novelty_focus": 0.0,
+      "criticality": 0.0
+    },
+    "conflicts": [
+      "equations_included"
+    ],
+    "requires": [],
+    "estimated_tokens": 8
+  },
+  {
+    "id": "model_architecture_focus",
+    "text": "Please focus on describing the model or system architecture.",
+    "description": "Highlights components and structure of the model.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.3,
+      "completeness": 0.4,
+      "structure": 0.5,
+      "technical": 0.8,
+      "depth": 0.7,
+      "insightfulness": 0.5,
+      "precision": 0.6,
+      "accessibility": -0.1,
+      "novelty_focus": 0.3,
+      "criticality": 0.0
+    },
+    "conflicts": [],
+    "requires": [
+      "focus_methodology"
+    ],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "fact_checking",
+    "text": "Please ensure that all statements in the summary are strictly supported by the paper.",
+    "description": "Discourages hallucinations and unsupported claims.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.2,
+      "completeness": 0.2,
+      "structure": 0.1,
+      "technical": 0.2,
+      "depth": 0.4,
+      "insightfulness": 0.2,
+      "precision": 1.0,
+      "accessibility": 0.0,
+      "novelty_focus": -0.1,
+      "criticality": 0.3
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 12
+  },
+  {
+    "id": "critical_evaluation",
+    "text": "Please include a brief critical evaluation of the strengths and weaknesses of the work.",
+    "description": "Adds evaluative commentary rather than pure description.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.4,
+      "completeness": 0.4,
+      "structure": 0.2,
+      "technical": 0.2,
+      "depth": 0.6,
+      "insightfulness": 0.8,
+      "precision": 0.3,
+      "accessibility": 0.2,
+      "novelty_focus": 0.1,
+      "criticality": 1.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "forward_looking_analysis",
+    "text": "Please briefly discuss possible future research directions inspired by this work.",
+    "description": "Adds forward-looking perspective beyond the paper.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.5,
+      "completeness": 0.3,
+      "structure": 0.2,
+      "technical": 0.2,
+      "depth": 0.4,
+      "insightfulness": 0.7,
+      "precision": 0.1,
+      "accessibility": 0.3,
+      "novelty_focus": 0.5,
+      "criticality": 0.2
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "contextualization_in_field",
+    "text": "Please briefly explain how this work fits into the broader research field.",
+    "description": "Places the work within its scientific context.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.5,
+      "completeness": 0.4,
+      "structure": 0.3,
+      "technical": 0.3,
+      "depth": 0.6,
+      "insightfulness": 0.7,
+      "precision": 0.3,
+      "accessibility": 0.3,
+      "novelty_focus": 0.4,
+      "criticality": 0.2
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "problem_statement_focus",
+    "text": "Please clearly describe the problem statement and why it is important.",
+    "description": "Highlights the core problem being solved.",
+    "effect_vector": {
+      "conciseness": 0.1,
+      "readability": 0.8,
+      "completeness": 0.3,
+      "structure": 0.5,
+      "technical": 0.2,
+      "depth": 0.4,
+      "insightfulness": 0.5,
+      "precision": 0.4,
+      "accessibility": 0.6,
+      "novelty_focus": 0.3,
+      "criticality": 0.1
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 14
+  },
+  {
+    "id": "assumptions_identification",
+    "text": "Please identify and summarize the main assumptions made in the work.",
+    "description": "Makes explicit the assumptions underlying the approach.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.4,
+      "completeness": 0.4,
+      "structure": 0.3,
+      "technical": 0.4,
+      "depth": 0.6,
+      "insightfulness": 0.7,
+      "precision": 0.5,
+      "accessibility": 0.1,
+      "novelty_focus": 0.0,
+      "criticality": 0.6
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 16
+  },
+  {
+    "id": "clarity_on_scope",
+    "text": "Please clearly describe the scope of the method, including where it does and does not apply.",
+    "description": "Clarifies the boundaries of applicability.",
+    "effect_vector": {
+      "conciseness": -0.1,
+      "readability": 0.6,
+      "completeness": 0.4,
+      "structure": 0.4,
+      "technical": 0.3,
+      "depth": 0.6,
+      "insightfulness": 0.7,
+      "precision": 0.6,
+      "accessibility": 0.3,
+      "novelty_focus": 0.0,
+      "criticality": 0.7
+    },
+    "conflicts": [],
+    "requires": [
+      "problem_statement_focus"
+    ],
+    "estimated_tokens": 18
+  },
+  {
+    "id": "risk_and_ethics_analysis",
+    "text": "Please briefly discuss potential risks, ethical issues, or societal impacts related to this work.",
+    "description": "Adds reflection on risks and ethics.",
+    "effect_vector": {
+      "conciseness": -0.2,
+      "readability": 0.5,
+      "completeness": 0.3,
+      "structure": 0.3,
+      "technical": 0.1,
+      "depth": 0.6,
+      "insightfulness": 0.8,
+      "precision": 0.3,
+      "accessibility": 0.4,
+      "novelty_focus": 0.2,
+      "criticality": 1.0
+    },
+    "conflicts": [],
+    "requires": [],
+    "estimated_tokens": 18
+  }
+]
