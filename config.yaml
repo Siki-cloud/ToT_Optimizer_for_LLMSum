@@ -13,7 +13,7 @@ models:
     max_model_len: 4096
     
   evaluator_model:
-    path: "Qwen/Qwen3-4B"  # 评估LLM路径
+    path: "Qwen/Qwen3-7B"  # 评估LLM路径
     device: "cuda:3"
     tensor_parallel_size: 1
     dtype: "bfloat16"
