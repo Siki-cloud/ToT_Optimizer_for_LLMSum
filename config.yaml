@@ -6,14 +6,14 @@ project:
 
 models:
   target_model:
-    path: "/mnt/sharedata/ssd_large/common/LLMs/Qwen/Qwen3-1.7B"  # 目标LLM路径
+    path: "Qwen/Qwen3-1.7B"  # 目标LLM路径
     device: "cuda:2"
     tensor_parallel_size: 1
     dtype: "bfloat16"
     max_model_len: 4096
     
   evaluator_model:
-    path: "/mnt/sharedata/ssd_large/common/LLMs/Qwen/Qwen3-4B"  # 评估LLM路径
+    path: "Qwen/Qwen3-4B"  # 评估LLM路径
     device: "cuda:3"
     tensor_parallel_size: 1
     dtype: "bfloat16"
